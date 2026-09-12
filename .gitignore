@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# Selenium
+chromedriver.exe
+geckodriver.exe
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project
+*.log
+allure-results/
