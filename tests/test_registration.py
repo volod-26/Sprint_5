@@ -1,8 +1,9 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import MainPageLocators, RegistrationPageLocators, LoginPageLocators
-from conftest import generate_email, generate_password, generate_name
+from helpers import generate_email, generate_password, generate_name
 import pytest
+
 
 
 class TestRegistration:
@@ -40,3 +41,5 @@ class TestRegistration:
         
         error = wait.until(EC.visibility_of_element_located(RegistrationPageLocators.PASSWORD_ERROR))
         assert error.text == "Некорректный пароль"
+
+        # Sprint_5 - финальная версия

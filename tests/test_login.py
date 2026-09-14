@@ -1,7 +1,7 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import MainPageLocators, LoginPageLocators, RegistrationPageLocators
-from conftest import generate_email, generate_password, generate_name
+from helpers import generate_email, generate_password, generate_name
 import pytest
 
 
@@ -34,3 +34,5 @@ class TestLogin:
         wait = WebDriverWait(driver, 10)
         wait.until(EC.element_to_be_clickable(LoginPageLocators.RESTORE_PASSWORD_LINK)).click()
         wait.until(EC.url_contains("/forgot-password"))
+
+        # Sprint_5 - финальная версия
